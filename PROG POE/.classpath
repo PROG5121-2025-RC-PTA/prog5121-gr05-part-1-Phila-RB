@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+<<<<<<< HEAD
+	<classpathentry kind="lib" path="lib/json-20250517.jar"/>
+	<classpathentry kind="lib" path="lib/mockito-core-5.18.0.jar"/>
+=======
+>>>>>>> branch 'master' of https://github.com/PROG5121-2025-RC-PTA/prog5121-gr05-part-1-Phila-RB
+	<classpathentry kind="output" path="bin"/>
+</classpath>
