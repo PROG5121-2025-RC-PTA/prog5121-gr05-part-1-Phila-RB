@@ -54,7 +54,7 @@ public class ExitAndMore extends JPanel {
 		quit.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				JOptionPane.showConfirmDialog(null, "You have sent " + chat.getMsgNum() + " messages.", "Info", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showInternalMessageDialog(null, "You have sent " + chat.getMsgNum() + " messages.", "Info", JOptionPane.INFORMATION_MESSAGE);
 				main.quit();
 			}
 		});

@@ -148,7 +148,6 @@ public class Chat extends JPanel {
 									try {
 										jFile.createNewFile();
 									} catch (IOException e) {
-										// TODO Auto-generated catch block
 										e.printStackTrace();
 									}
 								}
@@ -160,7 +159,6 @@ public class Chat extends JPanel {
 									write.close();
 								} 
 								catch (IOException e) {
-									// TODO Auto-generated catch block
 									e.printStackTrace();
 								}
 								typeMsg.setText("");
