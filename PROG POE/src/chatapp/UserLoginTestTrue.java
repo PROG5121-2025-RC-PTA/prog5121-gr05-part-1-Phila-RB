@@ -31,6 +31,7 @@ public class UserLoginTestTrue {
 	@Test
 	public void testReturnLoginStatusTrue() {
 		UserLogin test = new UserLogin("kyle!!!!!!!","password","08966553");
+<<<<<<< HEAD
 		Main main = new Main();
 		main.loggedInUser = test;
 		String userN = test.returnLoginStatus(main);
@@ -73,6 +74,48 @@ public class UserLoginTestTrue {
 		Main main = new Main();
 		main.loggedInUser = null;
 		String userN = test.returnLoginStatus(main);
+=======
+		Main.loggedInUser = test;
+		String userN = test.returnLoginStatus();
+		boolean toBool;
+		
+		if(userN.equals("A successful login")) {
+			toBool = true;
+		}
+		else {
+			toBool = false;
+		}
+		
+		assertTrue("A successful login", toBool);
+	}
+	
+	@Test
+	public void testCheckUserNameFalse() {
+		UserLogin test = new UserLogin("kyle!!!!!!!","password","08966553");
+		boolean userN = test.checkUserName(test.userName);
+		assertFalse("Username incorrectly formatted", userN);
+	}
+
+	@Test
+	public void testCheckPasswordComplexityFalse() {
+		UserLogin test = new UserLogin("kyle!!!!!!!","password","08966553");
+		boolean userP = test.checkPasswordComplexity(test.passWord);
+		assertFalse("Password does not meet complexity requirements", userP);
+	}
+
+	@Test
+	public void testCheckCellPhoneNumberFalse() {
+		UserLogin test = new UserLogin("kyle!!!!!!!","password","08966553");
+		boolean userN = test.checkCellPhoneNumber(test.cellNum);
+		assertFalse("Cell phone number incorrectly formatted", userN);
+	}
+	
+	@Test
+	public void testReturnLoginStatusFalse() {
+		UserLogin test = new UserLogin("kyle!!!!!!!","password","08966553");
+		Main.loggedInUser = null;
+		String userN = test.returnLoginStatus();
+>>>>>>> branch 'master' of https://github.com/PROG5121-2025-RC-PTA/prog5121-gr05-part-1-Phila-RB
 		boolean toBool;
 		
 		if(userN.equals("Failed Login")) {

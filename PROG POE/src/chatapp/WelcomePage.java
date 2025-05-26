@@ -2,6 +2,7 @@ package chatapp;
 
 import javax.swing.JPanel;
 import javax.swing.JTextPane;
+<<<<<<< HEAD
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
@@ -86,6 +87,28 @@ public class WelcomePage extends JPanel {
 		});
 		btnNewButton.setBounds(527, 447, 89, 55);
 		add(btnNewButton);
+=======
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Component;
+
+public class WelcomePage extends JPanel {
+
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * Create the panel.
+	 */
+	public WelcomePage(String name) {
+		setLayout(null);
+		
+		JTextPane loggedIn = new JTextPane();
+		loggedIn.setAlignmentX(CENTER_ALIGNMENT);
+		loggedIn.setFont(new Font("Tahoma", Font.PLAIN, 90));
+		loggedIn.setText("Congrats, " + name + " you are now logged in, The rest is coming soon");
+		loggedIn.setBounds(187, 55, 655, 550);
+		add(loggedIn);
+>>>>>>> branch 'master' of https://github.com/PROG5121-2025-RC-PTA/prog5121-gr05-part-1-Phila-RB
 
 	}
 }

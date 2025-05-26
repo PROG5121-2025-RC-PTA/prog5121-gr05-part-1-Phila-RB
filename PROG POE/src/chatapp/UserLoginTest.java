@@ -30,6 +30,7 @@ public class UserLoginTest {
 	@Test
 	public void testReturnLoginStatusTrue() {
 		UserLogin test = new UserLogin("kyle!!!!!!!","password","08966553");
+<<<<<<< HEAD
 		Main main = new Main();
 		main.loggedInUser = test;
 		String userN = test.returnLoginStatus(main);
@@ -63,6 +64,39 @@ public class UserLoginTest {
 		Main main = new Main();
 		main.loggedInUser = null;
 		String userN = test.returnLoginStatus(main);
+=======
+		Main.loggedInUser = test;
+		String userN = test.returnLoginStatus();
+		assertEquals("A successful login", userN);
+	}
+	
+	@Test
+	public void testCheckUserNameFalse() {
+		UserLogin test = new UserLogin("kyle!!!!!!!","password","08966553");
+		boolean userN = test.checkUserName(test.userName);
+		assertEquals(false, userN);
+	}
+
+	@Test
+	public void testCheckPasswordComplexityFalse() {
+		UserLogin test = new UserLogin("kyle!!!!!!!","password","08966553");
+		boolean userP = test.checkPasswordComplexity(test.passWord);
+		assertEquals(false, userP);
+	}
+
+	@Test
+	public void testCheckCellPhoneNumberFalse() {
+		UserLogin test = new UserLogin("kyle!!!!!!!","password","08966553");
+		boolean userN = test.checkCellPhoneNumber(test.cellNum);
+		assertEquals(false, userN);
+	}
+	
+	@Test
+	public void testReturnLoginStatusFalse() {
+		UserLogin test = new UserLogin("kyle!!!!!!!","password","08966553");
+		Main.loggedInUser = null;
+		String userN = test.returnLoginStatus();
+>>>>>>> branch 'master' of https://github.com/PROG5121-2025-RC-PTA/prog5121-gr05-part-1-Phila-RB
 		assertEquals("Failed Login", userN);
 	}
 
